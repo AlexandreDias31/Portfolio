@@ -1,5 +1,7 @@
 // ===== Configurações rápidas =====
 const WHATSAPP_NUMBER = '5544999127552';
+// TODO: trocar para o e-mail profissional do domínio quando criado
+// (ex: contato@alexandrehenriquedias.com.br)
 const CONTACT_EMAIL = 'alexdias0831@gmail.com';
 
 // ===== Persistência do tema (Interatividade & UX)
@@ -43,6 +45,7 @@ function closeMenu() {
   hamburger?.classList.remove('active');
   hamburger?.setAttribute('aria-expanded', 'false');
   menu?.classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
 
 hamburger?.addEventListener('click', () => {
@@ -50,6 +53,7 @@ hamburger?.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', String(!expanded));
   hamburger.classList.toggle('active');
   menu?.classList.toggle('open');
+  document.body.classList.toggle('menu-open', !expanded);
 });
 document.querySelectorAll('.menu-link').forEach(link =>
   link.addEventListener('click', () => {

@@ -163,11 +163,28 @@
       position:fixed; top:64px; right:16px; left:16px;
       flex-direction:column; background:var(--bg-2);
       border:1px solid var(--border); border-radius:12px; padding:14px;
-      transform:translateY(-16px); opacity:0; pointer-events:none;
+      transform:translateY(-16px) scale(.98); opacity:0; pointer-events:none;
+      transition: transform .25s cubic-bezier(.22,1,.36,1), opacity .2s ease;
+      box-shadow: 0 20px 45px rgba(0,0,0,.35);
     }
     :root[data-theme='light'] .menu{ background:#fff }
-    .menu.open{ opacity:1; pointer-events:auto; transform:translateY(0) }
+    .menu.open{ opacity:1; pointer-events:auto; transform:translateY(0) scale(1) }
+    .menu .menu-link{
+      padding:12px 8px; width:100%; border-radius:8px;
+      transition: background-color .15s ease;
+    }
+    .menu .menu-link:active{ background:rgba(179,11,45,.12) }
+    .menu .theme-toggle{ width:100%; justify-content:center; margin:6px 0 0 }
   }
+
+  /* Backdrop atrás do menu mobile aberto */
+  body.menu-open{ overflow:hidden }
+  body.menu-open::after{
+    content:''; position:fixed; inset:0; z-index:40;
+    background:rgba(0,0,0,.55); backdrop-filter:blur(2px);
+    animation: fadeIn .2s ease;
+  }
+  @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
   
   /* ====== Utils ====== */
   .container{ max-width:1100px; margin:0 auto; padding:0 24px }
@@ -414,6 +431,14 @@
   .card-body h3{ margin:0 0 6px }
   .card-body p{ color:var(--muted); line-height:1.6 }
   .card-actions{ display:flex; align-items:center; justify-content:space-between; margin-top:12px }
+
+  /* Feedback de toque para dispositivos sem hover (mobile) */
+  @media (hover:none){
+    .card:active{ transform:scale(.98) }
+    .chip:active{ transform:scale(.96) }
+    .btn-primary:active, .btn-secondary:active{ transform:scale(.97) }
+    .icon-link:active{ transform:scale(.92) }
+  }
   
   /* ====== Contato ====== */
   .contato{ padding:72px 0 }
@@ -611,6 +636,10 @@
   @media (max-width:980px){
     .hero{ grid-template-columns:1fr; gap:28px; padding-top:18px }
     .title{ font-size:42px }
+  }
+  @media (max-width:760px){
+    .hero-right{ order:-1 }
+    .hero-photo{ max-width:280px; margin:0 auto; display:block }
   }
   @media (max-width:480px){
     .title{ font-size:34px }

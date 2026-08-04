@@ -638,10 +638,19 @@
     .title{ font-size:42px }
   }
   @media (max-width:760px){
+    .container{ padding:0 28px }
     .hero-right{ order:-1 }
-    .hero-photo{ max-width:280px; margin:0 auto; display:block }
+    .hero-photo{ max-width:260px; margin:0 auto; display:block }
+    .hero-left{ text-align:center }
+    .stack{ justify-content:center }
+    .cta-row{ justify-content:center }
+    .social{ justify-content:center }
+    .section-title{ text-align:center }
+    .section-lead{ margin-left:auto; margin-right:auto; text-align:center }
+    .typing .caret{ display:none }
   }
   @media (max-width:480px){
+    .container{ padding:0 22px }
     .title{ font-size:34px }
     .subtitle{ font-size:16px; line-height:1.7 }
     .cta-row{ gap:10px }

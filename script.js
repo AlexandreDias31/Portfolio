@@ -113,6 +113,8 @@ const roles = [
   'Desenvolvedor Full Stack apaixonado por tecnologia',
   'Código limpo, boas práticas e evolução constante'
 ];
+const isMobileTyping = window.matchMedia?.('(max-width: 760px)').matches;
+
 let r = 0, i = 0, deleting = false;
 function type(){
   const current = roles[r];
@@ -125,9 +127,28 @@ function type(){
   }
   setTimeout(type, deleting ? 35 : 60);
 }
+
+// No mobile, um fade suave entre as frases fica mais elegante que apagar letra por letra
+function fadeCycle(){
+  let idx = 0;
+  typingEl.textContent = roles[idx];
+  typingEl.style.transition = 'opacity .45s ease';
+  typingEl.style.opacity = '1';
+  setInterval(() => {
+    typingEl.style.opacity = '0';
+    setTimeout(() => {
+      idx = (idx + 1) % roles.length;
+      typingEl.textContent = roles[idx];
+      typingEl.style.opacity = '1';
+    }, 450);
+  }, 3200);
+}
+
 if (typingEl) {
   if (prefersReducedMotion) {
     typingEl.textContent = roles[0];
+  } else if (isMobileTyping) {
+    fadeCycle();
   } else {
     type();
   }

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandre Dias | Portfólio</title>
+  <meta name="description" content="Portfólio de Alexandre Henrique Dias — Desenvolvedor Full Stack. Projetos, habilidades, experiências e contato." />
+  <meta name="theme-color" content="#121212" id="theme-color-meta" />
+
+  <!-- Open Graph / preview em links compartilhados -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alexandre Dias | Portfólio — Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Projetos, habilidades e experiências de Alexandre Dias, Desenvolvedor Full Stack em formação." />
+  <meta property="og:url" content="https://alexandrehenriquedias.com.br" />
+  <meta property="og:image" content="https://alexandrehenriquedias.com.br/assets/img/foto-perfil.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://alexandrehenriquedias.com.br" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23121212'/%3E%3Ctext x='50' y='64' font-family='Arial,sans-serif' font-weight='800' font-size='42' fill='%23b30b2d' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fontes e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Dados estruturados: ajuda buscadores a entenderem que a página é um perfil profissional -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexandre Henrique Dias",
+    "jobTitle": "Desenvolvedor Full Stack",
+    "url": "https://alexandrehenriquedias.com.br",
+    "sameAs": [
+      "https://github.com/AlexandreDias31",
+      "https://www.linkedin.com/in/alexandredias0831/",
+      "https://www.instagram.com/alexandre_dias31/"
+    ],
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Node.js", "MongoDB", "MySQL", "Git"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Camada de fundo (gradiente) -->
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <!-- Navegação -->
+  <header class="nav">
+    <a href="#home" class="brand" aria-label="Voltar ao início">
+      <span class="logo code-left">&lt;</span>
+      <span class="logo brand-text">AD</span>
+      <span class="logo code-right">/&gt;</span>
+      <span class="logo-caret" aria-hidden="true">▌</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="menu" class="menu" role="navigation">
+      <a class="menu-link" href="#home"><span class="hash">#</span> Home</a>
+      <a class="menu-link" href="#experiencias"><span class="hash">#</span> Experiências</a>
+      <a class="menu-link" href="#conhecimentos"><span class="hash">#</span> Conhecimentos</a>
+      <a class="menu-link" href="#projetos"><span class="hash">#</span> Projetos</a>
+      <a class="menu-link" href="#contato"><span class="hash">#</span> Contato</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" aria-pressed="false" type="button">☀️</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero container reveal">
+    <div class="hero-left">
+      <p class="eyebrow">Olá, meu nome é</p>
+      <h1 class="title" data-animate>Alexandre Dias</h1>
+
+      <!-- Texto digitando (Design & UI) -->
+      <div class="typing" aria-live="polite" data-animate>
+        <span id="typing"></span><span class="caret" aria-hidden="true"></span>
+      </div>
+
+      <p class="subtitle" data-animate>
+        Olá, meu nome é Alexandre Dias e sou apaixonado por tecnologia e desenvolvimento de software.
+        Sou formado em <strong>Análise e Desenvolvimento de Sistemas</strong>, com experiência em suporte de TI e sistemas corporativos.
+        Atualmente direciono meus estudos para o desenvolvimento <strong>Full Stack</strong>, criando aplicações com
+        <strong>HTML, CSS, JavaScript, React, Node.js, APIs e bancos de dados</strong>.
+        Busco minha primeira oportunidade como desenvolvedor para aplicar meus conhecimentos e evoluir profissionalmente.
+      </p>
+
+      <ul class="stack" aria-label="Minhas principais tecnologias" data-animate>
+        <li class="chip">HTML</li>
+        <li class="chip">CSS</li>
+        <li class="chip">JavaScript</li>
+        <li class="chip">TypeScript</li>
+        <li class="chip">React</li>
+        <li class="chip">Node.js</li>
+        <li class="chip">MongoDB</li>
+      </ul>
+
+      <div class="cta-row" data-animate>
+        <a class="btn-primary" href="#contato">Entre em contato →</a>
+        <a class="btn-secondary" href="#projetos">Ver projetos</a>
+        <a class="btn-secondary" href="assets/documents/Currículo.pdf" target="_blank" rel="noopener">Baixar currículo ↓</a>
+        <div class="social">
+          <a class="icon-link" href="https://github.com/AlexandreDias31" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.36 6.84 9.72.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.2-3.37-1.2-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.55 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.09-2.73 0 0 .84-.27 2.75 1.05a9.24 9.24 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.54 1.42.19 2.47.09 2.73.64.72 1.03 1.64 1.03 2.76 0 3.96-2.34 4.83-4.57 5.09.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/alexandredias0831/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.94 21H3.56V8.42h3.38V21ZM5.25 6.9A1.96 1.96 0 1 1 5.27 3a1.96 1.96 0 0 1-.02 3.9ZM21 21h-3.37v-6.46c0-1.54-.03-3.52-2.14-3.52-2.14 0-2.47 1.66-2.47 3.4V21H9.65V8.42h3.24v1.71h.05c.45-.86 1.54-1.77 3.17-1.77 3.39 0 4.02 2.23 4.02 5.13V21Z"/></svg>
+          </a>
+          <a class="icon-link" href="https://www.instagram.com/alexandre_dias31/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11.01 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7.01 3.5 3.5 0 0 0 0-7Zm5.25-.88a.88.88 0 1 1 0 1.76.88.88 0 0 1 0-1.76Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" data-animate>
+      <img src="assets/img/Foto perfil.jpg" alt="Foto de perfil de Alexandre Dias" class="hero-photo" loading="lazy" decoding="async" />
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIAS -->
+  <section id="experiencias" class="experiencias container reveal">
+    <h2 class="section-title" data-animate>Experiência Profissional</h2>
+    <p class="section-lead" data-animate>Minha trajetória em tecnologia envolve suporte, desenvolvimento de soluções e evolução contínua. Busco aplicar meus conhecimentos em TI e software para otimizar processos e gerar valor através da tecnologia. </p>
+
+    <div class="timeline" data-animate>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img class="timeline-logo" src="assets/img/Logo Ciapetro.png" alt="Logo da Ciapetro" loading="lazy" decoding="async" />
+        </div>
+        <div class="timeline-content">
+          <h3>
+            <a class="company-link"
+               href="https://www.ciapetro.com.br"
+               target="_blank" rel="noopener noreferrer">
+              @ Ciapetro Distribuidora de Combustíveis Ltda
+            </a>
+            — <span>Auxiliar de TI</span>
+          </h3>
+          <p class="muted"> fev, 2023 — o momento (<span class="tempo-exp" data-inicio="2023-02-01"></span>)</p>
+          <p>Presto suporte técnico a usuários e sistemas internos, aplicando lógica de resolução de problemas para diagnosticar falhas em software, redes e equipamentos. Configuro sistemas, gerencio permissões de acesso e apoio rotinas de backup e documentação técnica.</p>
+          <div class="badges">
+            <span class="chip">JavaScript</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <img class="timeline-logo" src="assets/img/saude.png" alt="Logo da Secretaria da Saúde" loading="lazy" decoding="async" />
+        </div>
+        <div class="timeline-content">
+          <h3>
+            <a class="company-link"
+               href="https://www.saude.pr.gov.br"
+               target="_blank" rel="noopener noreferrer">
+              @ Secretaria da Saúde
+            </a>
+            — <span>Estágio em TI</span>
+          </h3>
+          <p class="muted">jan, 2023 — fev, 2025 (2 anos)</p>
+          <p>Atendimento administrativo, consultas e alterações em banco de dados, atendimento ao cliente, geração de relatórios e apoio à logística.</p>
+          <div class="badges">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Word</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONHECIMENTOS -->
+  <section id="conhecimentos" class="conhecimentos container reveal">
+    <h2 class="section-title" data-animate>Conhecimentos</h2>
+    <div class="skills-grid" data-animate>
+      <div class="skill-card"><i class="devicon-html5-plain colored" aria-hidden="true"></i><div><h3>HTML</h3><p>Avançado</p></div></div>
+      <div class="skill-card"><i class="devicon-css3-plain colored" aria-hidden="true"></i><div><h3>CSS</h3><p>Avançado</p></div></div>
+      <div class="skill-card"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><div><h3>JavaScript</h3><p>Intermediário</p></div></div>
+      <div class="skill-card"><i class="devicon-typescript-plain colored" aria-hidden="true"></i><div><h3>TypeScript</h3><p>Básico/Intermediário</p></div></div>
+      <div class="skill-card"><i class="devicon-react-original colored" aria-hidden="true"></i><div><h3>React</h3><p>Básico/Intermediário</p></div></div>
+      <div class="skill-card"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><div><h3>Node.js</h3><p>Básico</p></div></div>
+      <div class="skill-card"><i class="devicon-mysql-plain colored" aria-hidden="true"></i><div><h3>MySQL</h3><p>Básico/Intermediário</p></div></div>
+      <div class="skill-card"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i><div><h3>MongoDB</h3><p>Básico</p></div></div>
+      <div class="skill-card"><i class="devicon-git-plain colored" aria-hidden="true"></i><div><h3>Git &amp; GitHub</h3><p>Intermediário</p></div></div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="projetos container reveal">
+    <h2 class="section-title" data-animate>Meus Projetos</h2>
+
+    <div class="grid-cards" data-animate>
+
+      <article class="card">
+        <div class="card-img">
+          <img src="assets/img/tela-inicial.png" alt="Tela inicial do sistema Controle de Faturas, mostrando painel de fornecedores e notas fiscais" class="card-cover" loading="lazy" decoding="async" />
+          <div class="card-overlay">
+            <a href="https://controle-faturas-five.vercel.app/" target="_blank" rel="noopener" class="btn-primary">Ver Online</a>
+            <a href="https://github.com/AlexandreDias31/Controle-Faturas" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Controle de Faturas</h3>
+          <p>Sistema web SPA para gerenciar contratos, PMMs e Notas Fiscais, com leitura automática de PDF/XML que reconhece o fornecedor e preenche os dados da NF, além de exportação de backup e fechamento mensal.</p>
+          <div class="badges">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Parsing PDF/XML</span>
+            <span class="chip">LocalStorage</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://controle-faturas-five.vercel.app/" target="_blank" rel="noopener" class="btn-secondary">Ver projeto</a>
+            <a href="https://github.com/AlexandreDias31/Controle-Faturas" target="_blank" rel="noopener" class="text-link">Código no GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img">
+          <img src="assets/img/kanban.png" alt="Quadro Kanban com colunas Pendente, Em andamento e Concluído" class="card-cover" loading="lazy" decoding="async" />
+          <div class="card-overlay">
+            <a href="https://kanban-sand-iota.vercel.app/" target="_blank" rel="noopener" class="btn-primary">Ver Online</a>
+            <a href="https://github.com/AlexandreDias31/Kanban" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Kanban</h3>
+          <p>Aplicação de gerenciamento de tarefas com colunas de status, priorização (alta/média/baixa), ordenação, arquivamento e tema claro/escuro persistente.</p>
+          <div class="badges">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Drag &amp; Drop</span>
+            <span class="chip">LocalStorage</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://kanban-sand-iota.vercel.app/" target="_blank" rel="noopener" class="btn-secondary">Ver projeto</a>
+            <a href="https://github.com/AlexandreDias31/Kanban" target="_blank" rel="noopener" class="text-link">Código no GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato container reveal">
+    <h2 class="section-title" data-animate>Entre em contato</h2>
+
+    <form class="form" id="form-contato" data-animate>
+      <label class="sr-only" for="nome">Nome</label>
+      <input placeholder="Seu nome" id="nome" name="nome" class="input" required autocomplete="name" />
+
+      <label class="sr-only" for="email">E-mail</label>
+      <input type="email" placeholder="Seu e-mail" id="email" name="email" class="input" autocomplete="email" required />
+
+      <label class="sr-only" for="assunto">Assunto</label>
+      <input placeholder="Assunto" id="assunto" name="assunto" class="input" autocomplete="off" />
+
+      <label class="sr-only" for="mensagem">Mensagem</label>
+      <textarea class="input" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
+
+      <div class="inline-actions">
+        <button type="submit" class="btn-primary">Enviar pelo WhatsApp</button>
+        <button type="button" id="btn-email" class="btn-secondary">Enviar por e-mail</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+  
+      <div class="footer-content">
+  
+        <h2>Vamos construir algo juntos?</h2>
+  
+        <p>
+          Estou aberto a oportunidades, projetos e novas conexões.
+        </p>
+  
+        <div class="footer-social">
+  
+          <a href="https://github.com/AlexandreDias31" target="_blank">
+            GitHub
+          </a>
+  
+          <a href="https://www.linkedin.com/in/alexandredias0831/" target="_blank">
+            LinkedIn
+          </a>
+  
+          <a href="#contato">
+            Email
+          </a>
+  
+        </div>
+  
+      </div>
+  
+  
+      <div class="footer-bottom">
+  
+        <p>
+          © <span id="year"></span> Alexandre Dias.
+        </p>
+  
+        <a href="#home">
+          ↑
+        </a>
+  
+      </div>
+  
+    </div>
+  </footer>
+
+</body>
+</html>
